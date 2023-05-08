@@ -25,8 +25,8 @@ A finonhangolás folyamatát az alábbi Google Colab [munkafüzetben](https://co
 
 ## Modell
 
-A finomhangolás folyamatát a fent ismertetett munkafüzetben végig lehet vezetni, de a kísérletben elkészített modellt és a szótárt [itt](/bert_zero_hu) is elérhetővé tettem.
-A szótár, a súlyok és a modell konfigurációs fájlja a [`transformers`]() `from_pretrained()` metódusával betölthető és használható.
+A finomhangolás folyamatát a fent ismertetett munkafüzetben végig lehet vezetni, de a kísérletben elkészített modellt és a szótárt [itt](/bert_zero_hu/) is elérhetővé tettem.
+A szótár, a súlyok és a modell konfigurációs fájlja a [`transformers`](https://huggingface.co/docs/transformers/index) `from_pretrained()` metódusával betölthető és használható.
 
 ## Kiértékelés
 
@@ -40,14 +40,14 @@ A négy címkére külön számítottam pontosságot, fedést és F-mértéket �
 * álnegatív: a jósolt címke `NOZERO`
 * valós negatív: minden egyéb esetben
 
-|            | pontosság | fedés |  F-1 |
-|-----------:|----------:|------:|-----:|
-|       SUBJ |      1,00 |  0,91 | 0,95 |
-|        OBJ |      0,43 |  0,60 | 0,50 |
-|    SUBJOBJ |      0,73 |  1,00 | 0,84 |
-|       POSS |      1,00 |  0,91 | 0,95 |
-| összesítve |      0,97 |  0,91 | 0,94 |
-|      átlag |      0,68 |  0,71 | 0,69 |
+|              | pontosság | fedés |  F-1 |
+|-------------:|----------:|------:|-----:|
+|       `SUBJ` |      1,00 |  0,91 | 0,95 |
+|        `OBJ` |      0,43 |  0,60 | 0,50 |
+|    `SUBJOBJ` |      0,73 |  1,00 | 0,84 |
+|       `POSS` |      1,00 |  0,91 | 0,95 |
+| `összesítve` |      0,97 |  0,91 | 0,94 |
+|      `átlag` |      0,68 |  0,71 | 0,69 |
 
 A modell az `OBJ` címkék esetében teljesített a leggyengébben, azonban szem előtt kell tartani, hogy a tesztadat 260 mondatában összesen 9 `OBJ` címke szerepelt.
 A leggyakoribb címkéből (`SUBJ`) 188 szerepelt a tesztadatban, amelyeket nagy pontossággal tudott azonosítani a modell, igaz, a fedése nem volt tökéletes.
