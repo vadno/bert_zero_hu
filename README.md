@@ -25,8 +25,8 @@ A finonhangolás folyamatát az alábbi Google Colab [munkafüzetben](https://co
 
 ## Modell
 
-A finomhangolás folyamatát a fent ismertetett munkafüzetben végig lehet vezetni, de a kísérletben elkészített modellt és a szótárt [itt](/bert_zero_hu/) is elérhetővé tettem.
-A szótár, a súlyok és a modell konfigurációs fájlja a [`transformers`](https://huggingface.co/docs/transformers/index) `from_pretrained()` metódusával betölthető és használható.
+A finomhangolás folyamatát a fent ismertetett munkafüzetben végig lehet vezetni.
+A létrejövő szótár, a súlyok és a modell konfigurációs fájlja a [`transformers`](https://huggingface.co/docs/transformers/index) `from_pretrained()` metódusával betölthető és használható.
 
 ## Kiértékelés
 
